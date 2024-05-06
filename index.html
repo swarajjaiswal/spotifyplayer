@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png" type="image/x-icon">
+    <link rel="stylesheet" href="utility.css" />
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left">
+            <div class="home bg-gray round">
+                <div class="logo">
+                    <a href="index.html" target="_blank"><img class="invert" width="110"
+                            src="https://spotify.freewebhostmost.com/img/logo.svg" alt="Logo" />
+                    </a>
+                    <ul>
+                        <a href="#">
+                            <li>
+                                <img class="invert" src="https://spotify.freewebhostmost.com/img/home.svg"
+                                    alt="Home" />Home
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <img class="invert" src="https://spotify.freewebhostmost.com/img/search.svg"
+                                    alt="Search" />Search
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="library bg-gray round">
+                <div class="libhead">
+                    <img class="invert" src="https://spotify.freewebhostmost.com/img/playlist.svg" alt="Your library" />
+                    <div class="inner flex">
+                        <h2>Your library</h2>
+                        <img class="invert"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAklJREFUWEetWAFyhCAMDC/r/ey8n11fZkWjJLJLglNn2qkKYcluNtgi11VEZG23ib/iGToiHuhQ+KWHk+3L3Cq5USJisCsgvlg6qI00O8nM5eQE2SqyyvpoYU5lfeNVBBboHoEHFtwjjDuKImWf3H5N6IklNrMjlQwainczETRRjf0QT9ldvSCkBzSkrMhLVnlpkK+I1B+Y6QyVTkMsUJCEZWP9rRL4bFZW70HlBrWjsulFPb+9Bkjks003gCb4dD7ERB3E0xiDDIUW1xwR+RDGxTzjUsQOSO9whi461rA5GcqKdF4SG1Dd1yJS3toHh4Bsr2TVTUSdqYeLz5uGyoIX1g0nZACH3L3hOAdAoDFlCRDnOYNmaKcvUyRFlm3oUfYPq8xqt9eQz0Q1vNP0OrdT0PX9j778FSnfRhnMaGeexKmtqH0FcbZwCtsCEFAn/ETruJqfpWNAIFiYe9ugEo91R9dOWVBzN8pAL/MrNMqArUyXPQD3oHUwsxU9DzGRBMbYtY69ypgPZdpIRBk2I08AKHvmwvirxi9yUMY0mTO0B5SBwIZF9wnSmyGTNLAGYIxTTUhzk/Hj0ZguQ2kQhBlAWTpkBZpsrkDUhDn42PayTtseLz5+TO2pQYiMMeoN9b3td/iQnxGFEzWzCOtfzAIeZsJibCFqP71fDASTwD8AstZzfLkOUxqPCBkBnWJkJrDK4n8k+JDMnbuDXuD+xqnZmTeToYdjSOaujHdhwQRfoPYkjIhnAYgjrmdzHRFKBRZ8RQRJw95W5A9I2A07rJRsywAAAABJRU5ErkJggg==" />
+                    </div>
+                </div>
+                <div class="songList">
+                    <ul>
+
+                    </ul>
+                </div>
+
+                <div class="bottom flex  ">
+                    <div>
+                        <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right  round">
+            <div class="header bg-gray flex">
+                <div class="navbar">
+                    <div class="hamburgerContainer">
+                        <img width="40" class="invert hamburger"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeBJREFUWEe9V9G2wyAI0z+/f96dWltBAoRu5/Zla7UCIYm2t/++emvt8IL2dg7//ApjJtG+SAiEHY/OKo/zJ0BiZmXmfIWQF1E/l3cz35Ho+r/NX7f+QgtlpuyXDJhLOy0Toy4BucASFfzGbPEY7K0zNXsoegFy8gQqMz2+Mz2J6XFvzjGBEzhytC5uTYaF0Qv9kVPrrY9k77NHypuuA+rNFEokhJuqYd3v7jghQ0Hs2IeOyyxAt2pKANk+bCoh5PMmLfx2PmKf2AqOWpaSnQEqV4OmhFWZEQkIW0WIERty6vcV6zelkY6NtqBE1bItob9rHWntycq1iub6uqmx7BmomeqNRY8iOzqi2IRWlcm2ysCRkM0Mx5srhBQaB5CueoS9NWiZgTQXq+08oq7v8vJUuc+C0ZmG5Btz4TgruAhpiaULFOcfbcKvizVoLQOg7+Hj+U09qyiCR4dUZdj0PN7ALWCrRO32JueXp2navB7L0fTwBQUTWoKsto87aVxZgoYCcx0fgcwBiVYoCC6c2l9GQrq+8gwnngdh2l7xVvbMpuT31yT90lsFQtwKTPWh8Sf9/FFCBdYk2VIc4rC7ZyUkSRZTCOWWVkAilG/MxcLWwWH1DcFdhHBo4MKJMVeT+wDJ09UwZPpMqwAAAABJRU5ErkJggg==" />
+                        <img class="invert"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAnRJREFUWEetmE1u2zAQhT8eoUjuEKTZdZkCho/eNtl3kY0XWWUToEaLAj0AC0m0+DMz5EiONrYpavg4b94byoE9VwAipI8mQj1a/tLn149Pc+TIZTErmhLZs5i1Vh4P8yZ3XxaIXeBmFCYgTwqmh+PEnH5tQNUSsQbMN+rF5vENC5QUzMWWdp+/l3uoC9KgbNfqNvXlmkIQUgQbasgG6lGcN1EqoEzTNdmyLUAhbcVrc/zxMrLMq6rjddI4F0OE9xB+Q/ylpb0UjeWsS1ELA/Q4ogB3BzwD/wIcI7wN06GgDvslXS33GfgB3KTRn8AXuzj7glRraEzfGnTOTIDb5Dhn4BF4vRLQBvXnqQ/AN+A2DZ0hHCCeXNGMhqA6demqRrYmME/ApwyGA4TT2J1dlGkVthwzlKsBE86BeIiB07BTiGA7nLrJUJuZP8BXoKZJpNVuxpWmu84ib0owgSMxvJS+IpS7QSGL7P1sPQR4irlupuwcIQGy+kG3idUPFd3eDU2j7Ai8VPvaaXAFIPuMnA9iK+hxHVmABvRVgPIOlQOapLUCFeAcmWTfFHfPkBTQRobcVfhxxpiWNDKU6HOkN8KlqRZu3WkdAwvvA/L4/wJ6Ut/3ODfX+VKaq6sMrnsNalR+F8Xxo96R4pXiWCQz1KWp3GXlr5dX2XsifwO8a28pnspcABUFJU1SualE1hfzTWy35qmUNKcEN3hRdLt/DdpFmSfVpYd1/olQjjryBO2jbEM/6gJyWElNR7dBbmBXieppb1VRW1h2UeYwQPWUsW2x7RnyPCFV5lNnE9tRDOZ/NYpoL0O6e0opjmILlXVFoJhqCvAfyd8BN/jlkwIAAAAASUVORK5CYII=" />
+                        <img class="invert"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAn5JREFUWEelmE1OJDEMhT+vWDEjIbFhN7sWUt9gEBwdgThCa+AOoDlCUFVS3U7FTpyZXtVPKvX8/PzsLuH8EyBdTtXReqe57a83N3Ev6n2E5az+dd8TAVGvmQ2mBaThld2EVLhbItiOIzzso+88W5YGGDJY6aZvkHojJTrIPkMGCfbrVHiJVQeVGiOZLu8SO8c+kvDesxtvgOZEHdNNV2eDiJyUGZXSiN1jMfBG213WDac15HF0gaErcR5cBcgTrC77nVzvgB/AeySZhqM0XpxFrQRlsWlHzy/gGbgCHoGPFtSsb1UpC9fP9t4TcJ9P5AvSA/DHKPqBebR69dnue+IBeEG4LRR/Ar8XpqZD2/XNKUC7xQeEFxK35foKSuCjb4x9N4/p0Te6hak34EaDqjTlMe1cNyQ9QXpeeiwCv4ASnkgsOovJynXqgQHqitP1KaRjylW3gfoLLEI/Vc2tbntmo4ilLGINwpHEK/CzgLiAsogyunDfqcOZOy88gjwL6aaIugKk02czvWsd4QZtc7rXUQsmkIvKqQPriw8247cLxmOi1xPDOM4LtTCFA6kp+yeE0/4/Q1cBas+BXLtlNzDGsAjPGFpRx4WUWwfZpQU+U2kdXcr1/n1j1P4ViUxOkO5zeevm6s/U3nijZ5DMUEHtjZ4OvDx+CFckb/wYNHrndn3ZMKs1AhvVMqBd27NQ+7YQ7/MltnvCC2DQgkJlH4lgLNiJog2lrLvfYCT1xoxwFKF/Hf/N20AVJcjWGGfLfr6CdEXbn36szzG6JQ9js74b+Q9FuFZO7S2vrzdGq297xxM6b1tHYeifvgkN2s6YoS1ldffu+ODUeNzkLpKDb3zr+yoGTByEAAAAAElFTkSuQmCC" />
+                    </div>
+                </div>
+                <div class="btn">
+                    <button id="first">SignUp</button>
+                    <button id="second">Log in</button>
+                </div>
+            </div>
+            <div class="playlists">
+                <h1 style="
+                display: flex;
+                position: sticky;
+            "> Spotify Playlists</h1>
+                <div class="CContainer">
+
+
+                    <div data-folder="sleep" class="cards">
+                        <div class="play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f000000029778f9c7fc5d7923797fe4ad" alt="Om Shanti Om">
+                        <h2>Sleep Songs</h2>
+                        <p>By Spotify</p>
+                    </div>
+
+
+                    
+                    <div data-folder="bollywood" class="cards">
+                        <div class="play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f00000002ce63eebfef5bed7bb1163bab" alt="Om Shanti Om">
+                        <h2>All Out 00's Hindi</h2>
+                        <p>Bollywood songs that ruled hearts in the Y2K decade.</p>
+                    </div>
+
+
+
+                    <div data-folder="honey" class="cards">
+                        <div class="play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <img src="https://seed-mix-image.spotifycdn.com/v6/img/artist/7uIbLdzzSEqnX0Pkrb56cR/en/default"
+                            alt="Yo yo Honey singh">
+                        <h2>Honey Singh Mix</h2>
+                        <p>Maninder Buttar,Raftaar,Hardy Sandhu</p>
+                    </div>
+
+
+                   
+
+                    <div data-folder="bhojpuri" class="cards">
+                        <div class="play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f000000020a962c37a986e35e8510923d" alt="Om Shanti Om">
+                        <h2>Hot Hits Bhojpuri</h2>
+                        <p>Pawan Singh,Neelkamal Singh</p>
+                    </div>
+
+
+
+                    <div data-folder="bus" class="cards">
+                        <div class="play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+    
+                        </div>
+                        <img src="https://i.scdn.co/image/b88cd94c6046b3e71b8071f52048a550b2731af1" alt="Om Shanti Om">
+                        <h2>Bus Driver Mix</h2>
+                        <p>By Bus Drivers</p>
+                    </div>
+
+
+                    <div data-folder="punjabi" class="cards">
+                        <div class="play">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+    
+                        </div>
+                        <img src="https://i.scdn.co/image/ab67706f0000000258777c952a2f253fcf675e66" alt="Om Shanti Om">
+                        <h2>Hot Hits Punjabi</h2>
+                        <p>By Spotify</p>
+                    </div>
+
+                    
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle">
+
+                    </div>
+                </div>
+                <div class="abovebar">
+                    <div class="songinfo">
+
+                    </div>
+                    <div class="songbuttons">
+                        <img id="previous" width="35"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABP1JREFUWEedmFuIVlUUx38rwnQq62EMtKIhUqIgqgkSDHqI8KGg6AZR2k1FJMosK4qascIoi4HEhigKpKTSLmj04IP0lATR5SUwZcxSpgshZBiasdvrnPWds/c++3wXDwzDOfuy1v6v//qvtT+h2yOAy0wY4Hsx1ebXy8IN4s30bQCL4VRBcLGxARxtwyFwyAx0m+mgzWZXpAcIQwtCPbe/BrgTuBqYY3+66A/gd+Ar4D1g96ARiBxqnD4O9UwcK4HVwAWpoRZ+TIGbAN4EOdYgZAbufhG6H3gJZDjP8p6IKmqPAFvKme2BbzrUyAg2AI8lGx0Gtgl86oQpHAfNpfOAi4CbgVuBsxNXnwWe7+aSdAmTDr0Dck+NivwCbj3wFsiJ4nv7BqcBy4EnfcjODSa+Bjwc52tgoQF2bWASYWWlQ8JWHHcDx1sDlJeXIYQPcNwYrHvOy9NY5z1dltOhNeBeDQZeBp44maQPGPA6FEnRYdESB+/GxlV6ms9ZHupDwOk29BFwWzStXWjraSbRgXieAnzupWCxcWjawQjI8TD0ubRfByj5FBAl7CUCx8oKEjM+XxZidhQO1ajMdrAXOMe2W4VjMuVT9S4ww8FvQXbcAvJJJtXHlQPmnh5A39PnVCiMLU+Ir2GbtLUHQEbC/UuE6hDcAHxmO/8AXBrzppo4DjJmG9UO1fuoem8HFha7x5mojk4Dw2bnCoHvOhFI0/5t4D5z4gXgmdjfCoTaIWGdj0mI0CiwA5hbR6qBntkpvld2CluJjHyPcJkFfRHwZSYU+qkImY2FIVtSahQzOuvEQxl1MKXB24EPyzmyE1xB9M7hQ5uHEOaZQyMerQM9EQJ1SE+5CWFFpn/KZfLlwLcRNYJ8CXxzR33NmmUfhrz2/NOCkKIzbnts8iHSMClfck/OIS0ph41bfwEqNSlCRT90xMEZNnamr2F/VxbCjBfGAt684RPhKnOqdqjmQs4htXHEJuv/2W0h+9H3MfNtcD7CvjQEZqdAyObp/xeNO8qh9Mk5tMD3U3sMoT3AxaHEhZn9BXCtfbgO2NVSLtpIvQLYGJLaRCV18npgp33cBaitSiHCyVWrIbDBweOljNRqG6BSCmOR9jJey78sBKcaNMcOk0NoQmC1ZZ+i+1RbyJSYnbZzL8KCtMOwkNVK3dQh3Vs1aAfIqN050qZsP0UdK55RgW8qYayoXRergyDzTIVVL7aFTDW08qUjFjXVItWkpUm8lGebze5+HBeG42np0DHtDjV0+kx5ASuLa1xXQx+7drVJAR5ysA9krh1sldW7Kro5h2aB/Cy4YQNtK7g78smTu0Vm8swYK7DdUTVqv5aXBWs/bFmOcDq0rLwpVE9Ub1pNZgYCOdoI7sFgyl110x8D3ra/dolrg7TfDLIM3L/RgqQY6ljyaabXmfd9qbgpWKdFWw/ZCH2zyY/dU1I+EHz6CdB+WEn5Xw+kkia/oskEjjVta9tCFp5ST/J0ssGf1rhpBqqTeg3Svc43pdeWVxGpSoKtXwu8kjqTEL8vRtxrmddpqpJFoXhmYlj26A8BH/ey1opQY6GgV2m9Zz3a/1UarVPKRQ3xiayrjaP1crk5rvsuAlnqS8SVwY8NqgH6Y8O0wG4nbPF3sa/73t7iFiA0gPKFQe9qsWcom4HIw9gGbj+gxzb6XhHg0Teqqcb0YyycE4hk+VthFab6l7j/AUU/fzoaLTGgAAAAAElFTkSuQmCC" />
+                        <img id="play" width="35" src="play.svg" />
+                        <img id="next" width="35"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABSZJREFUWEedmFuoVlUQx38TUUcz8+EYdMOIjEiILg8FBT1E9JBlVAZRdlUyu1lpSRfPOSZFWggFBSYFWlLZjYgefJCe0qDT5SUwJa0Uy0MIGYVmrNasPXvvtfZe+/s+W3D8PveaNTNr5j//mf0J2SWAA/vIy8RPY8H4bJeCbv26Y0sQnLrRYw1irOt46lynq/mNLucy0png9I9oKpGoCP8ZODWVosuBW4BLgOn2pymewMl+cF8CbwNb/49zg2FFGMKxUGCxgxndhhJ8/AisAV4HDvVMZnRsEIfuRngBx/BgCGlICftxPAJs7BexBNQdlbUaWFJDP6T4AI73gY8BjcIe2z8dOFvgegc3gkxr6FyO8Gy2cpIItdyukPUmyB1BabF+AZ4D1oEciZ7nLn48sEBgmYPTVMBsvgw83IsQuqL4GrAw2twE3AYczh1oGagfTEZ4F8fs+pGsADfS1qPVnV3yKLiXImJcBTzRF8gZgSgTrzYuOA/hrSb/SiZ0J/lQ7wVOMIc+AG4qbB0F6bQVHwN85qngavN7H3CmRryptVllY8ByO6SAPa9XySaO9uTNsDkV2AGcbPdbhEOhYUtoRug4hN9wTDOJG0A+aoBXOeU+4EgraDAKMmItaMzfdDRuR+av4rJ04ieNUpupaxevQfjUqPt7YFYKi3BUS24bcJ3ARFF/FVJGfTscsf9ppEczsDoW2CcwbLV7IfBtHaP0xBvAXWZipYNnOhzSx4qBa/3feCSjDpTVEyLUQQ2VHWAlkZ1mlX0HnG8GLgO+qO5fl0sIkS2lgPnABtvu4VCSmLng3jP8bQZXAr1V9lpdp5oxrQDNcXOZP0nPWgvc73H1dBqhbMpU3wXAN6a4gEaprlEYfwGTDBOTPff8nY1Q7Ev9fZsTxnHBMV0aLcVRtSr+L4rmgG384RuwUk1YScoEDjqYYg6d6HvYnxnuSSNUKxp38JXH1r15h5KUTQF30OT0U+kguNPE0A9+jplpgvq5s0lSYmWWXpsNhqUne6UscukcP09tNx36eW42QsDnwBW2eSWwpQ2hstMG9YcRHsSxtgVqYcxLFmVvuYo46Spgs+lWG2qrnTLfLlYjLDEe0u+PV42+vp4zAE4oFxWcVG2GKuvDQ2pYh7bF5sPzvn1oZJsOBTWXlmOnwA4HGtpaskCPOqTgVQ5SLopXvuxbEZJd4LSKdV3sL/Z1aaSJIUXVHp+CsvTnQhjEYq/WG16KMSTtjA2mzhLjPEB16Nrlv58V6286pHs6HeqUqCs0V4FDSYuIY5JpqI2oxU7rbLQTxykms0j7Wnqn6LRFdhKOn4Fhu/0mgZtLdo64pGU3eRALFhb130+A2Sb3K8IMnA18EbdlqEbmg9OuXq6q3wwSkDiVkfwrAg9EbefWYuhPNRYpy19bp8SlEXzW40Lf+qcEYN0420ojw0MI7+BkTtRotWnrJbPZtYdZpev8YH9PBLrdglvhBHXu3xiMGefCkA8s8+9lYci3tQbCiJxNeQTqzmToTZ4qT5vU7za4aQXuttcg3ToDZCY4HXnngEyNDQss9a3pxV7g63CoFa07XVF5wz0x1LUp7MXxkB9tPuz8RSUBdTZprXsMgSzwTfExer5Kx+dku+BWucA7fd/jKjgP5k59e/2mw9vtvowvKn5okOnWc7WdKHtvRdjo38W0+0d10fhho1VMufeyQYgmCm8CzUzKWo/68Eb7vWwQomk51M9K8ZtP3e27blQOaEfhRL7UOwgloffu2qqTIvwHUze8O9SNI24AAAAASUVORK5CYII=" />
+                    </div>
+                    <div class="timevol">
+                        <div class="songtime">
+                        </div>
+                        <div class="volume">
+                            <img src="volume.svg" alt="">
+                            <div class="range">
+                                <input class="invert" type="range" name="volume" value="100" id="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburgerIcon = document.querySelector(".hamburger");
+    const leftPart = document.querySelector(".left");
+
+    // Initially close the hamburger menu
+    leftPart.style.left = "-100%";
+
+    hamburgerIcon.addEventListener("click", () => {
+        const currentLeft = getComputedStyle(leftPart).left;
+        if (currentLeft === "0px") {
+            leftPart.style.left = "-100%";
+        } else {
+            leftPart.style.left = "0";
+        }
+    });
+});
+
+
+            </script>
+            <script src="script.js"></script>
+</body>
+
+</html>
